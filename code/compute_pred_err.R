@@ -10,6 +10,6 @@ compute_pred_err = function(pathX, sim_y, train_n, fit){
   n = dim(X.all)[1]
   X.test = X.all[(train_n+1):n,]
   y.test = sim_y[(train_n+1):n]
-  pred_err = mean((y-predict(fit, X.test))^2)
+  pred_err = mean((y.test-predict(fit, X.test))^2)
   return(pred_err)
 }
