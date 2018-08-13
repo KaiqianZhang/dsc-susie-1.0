@@ -6,7 +6,7 @@ library(susieR)
 #' @param fit a susie fit object
 #' @return pred_err a scalar prediction error
 compute_pred_err = function(pathX, sim_y, train_n, fit){
-  X.all = readRDS(pathX)
+  X.all = as.matrix(readRDS(pathX))
   n = dim(X.all)[1]
   X.test = X.all[(train_n+1):n,]
   y.test = sim_y[(train_n+1):n]

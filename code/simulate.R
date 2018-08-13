@@ -74,6 +74,8 @@ sim_binary_y = function(X, effect_num, beta.sigma, intercept=0){
   yhat = X %*% beta + intercept
   logit.prob = 1/(1+exp(-yhat))   ###Do I need to add epsilon for logistic link???
   sim.y = rbinom(n, 1, logit.prob)
+  sim.y[1] = 0 #hard-coded here to avoid elbo error in susie
+  sim.y[2] = 1
   return(list(train_n=train.n, sim_y=sim.y, beta_idx=beta.idx, beta_val=beta.values, effect_num=effect_num))
 }
 
