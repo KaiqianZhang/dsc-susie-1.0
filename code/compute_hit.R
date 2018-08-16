@@ -10,7 +10,7 @@ compute_hit = function(cs, beta_idx){
   for (i in 1:cs.length){
     if (any(cs[[i]]%in%beta_idx)) hit=hit+1
   }
-  return(hit)
+  return(list(hit=hit, cs_length=cs.length))
 }
 
 
