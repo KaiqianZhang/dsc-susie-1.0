@@ -30,6 +30,13 @@ if(is.null(s_init)){
     }
 }
 
-cs=susie_get_CS(fit, X)$cs
+
+cs = susie_get_CS(fit, X)$cs
+num_iter = fit$niter
 beta_est_idx=unlist(cs)
 beta_est_val=coef(fit)[-1][beta_est_idx]
+
+
+
+
+

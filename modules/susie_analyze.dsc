@@ -11,6 +11,7 @@ susie_gaussian: susie.R
   $cs: cs
   $beta_est_idx: beta_est_idx
   $beta_est_val: beta_est_val
+  $num_iter: num_iter
   
 susieL0_gaussian: susie.R
   pathX: $pathX
@@ -24,6 +25,7 @@ susieL0_gaussian: susie.R
   $beta_est_idx: beta_est_idx
   $beta_est_val: beta_est_val
   $s: s
+  $num_iter: num_iter
   
 susie_gaussian_largeEffect(susie_gaussian):
   sim_y: $sim_gaussian_largeEffect_y
